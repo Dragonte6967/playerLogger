@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "playerlogger",
+  "version": "${version}",
+  "name": "playerLogger",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/playerlogger/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "top.dragonte.playerlogger.Playerlogger"
+    ]
+  },
+  "mixins": [
+    "playerlogger.mixins.json",
+    {
+      "config": "playerlogger.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
